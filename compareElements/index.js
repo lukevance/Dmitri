@@ -1,6 +1,6 @@
 "use strict";
 
-function combine (oldResources, newResources){
+function combineResources (oldResources, newResources){
   let results = [];
   Object.keys(oldResources).forEach((resource) => {
     // console.log(resource);
@@ -24,6 +24,10 @@ function combine (oldResources, newResources){
   return results;
 }
 
+function combineCRUDS (oldCruds, newCruds) {
+  
+}
+
 module.exports = {
-  combine: combine
+  combine: combineResources
 };
