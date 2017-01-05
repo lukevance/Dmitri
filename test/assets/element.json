@@ -1,0 +1,1953 @@
+{
+    "bulkUploadEnabled": true,
+    "image": "elements/provider_sfdcmarketingcloud.png",
+    "private": false,
+    "configuration": [{
+        "internal": false,
+        "hideFromConsole": true,
+        "companyConfig": false,
+        "name": "Bulk Relations",
+        "displayOrder": 1,
+        "description": "Bulk Relations",
+        "active": true,
+        "type": "TEXTAREA",
+        "resellerConfig": false,
+        "groupControl": false,
+        "key": "bulk.relations",
+        "required": false
+    }, {
+        "internal": false,
+        "defaultValue": ">",
+        "companyConfig": false,
+        "displayOrder": 1,
+        "description": "Bulk query Operator",
+        "active": true,
+        "type": "TEXTFIELD_128",
+        "resellerConfig": false,
+        "required": false,
+        "hideFromConsole": true,
+        "name": "Bulk query Operator",
+        "groupControl": false,
+        "key": "bulk.query.operator"
+    }, {
+        "internal": false,
+        "hideFromConsole": true,
+        "companyConfig": false,
+        "name": "Bulk Add Metadata",
+        "displayOrder": 1,
+        "description": "Bulk Add Metadata",
+        "active": true,
+        "type": "TEXTFIELD_128",
+        "resellerConfig": false,
+        "groupControl": false,
+        "key": "bulk.add_metadata",
+        "required": false
+    }, {
+        "internal": false,
+        "defaultValue": "page",
+        "companyConfig": false,
+        "displayOrder": 1,
+        "description": "ExactTartget Pagination Type",
+        "active": true,
+        "type": "TEXTFIELD_32",
+        "resellerConfig": false,
+        "required": false,
+        "hideFromConsole": true,
+        "name": "Pagination Type",
+        "groupControl": false,
+        "key": "pagination.type"
+    }, {
+        "internal": false,
+        "defaultValue": "yyyy-MM-dd'T'HH:mm:ssXXX",
+        "companyConfig": false,
+        "displayOrder": 1,
+        "description": "Bulk query Date Mask",
+        "active": true,
+        "type": "TEXTFIELD_128",
+        "resellerConfig": false,
+        "required": false,
+        "hideFromConsole": true,
+        "name": "Bulk query Date Mask",
+        "groupControl": false,
+        "key": "bulk.query.date_mask"
+    }, {
+        "internal": false,
+        "defaultValue": "https://www.exacttargetapis.com/",
+        "companyConfig": false,
+        "displayOrder": 1,
+        "description": "ExactTartget Base URL",
+        "active": true,
+        "type": "TEXTFIELD_1000",
+        "resellerConfig": false,
+        "required": false,
+        "hideFromConsole": true,
+        "name": "Base URL",
+        "groupControl": false,
+        "key": "base.url"
+    }, {
+        "internal": false,
+        "defaultValue": "50",
+        "companyConfig": false,
+        "displayOrder": 1,
+        "description": "ExactTartget Max Page Size (or limit)",
+        "active": true,
+        "type": "TEXTFIELD_32",
+        "resellerConfig": false,
+        "required": false,
+        "hideFromConsole": true,
+        "name": "Max Page Size (or limit)",
+        "groupControl": false,
+        "key": "pagination.max"
+    }, {
+        "internal": false,
+        "defaultValue": "",
+        "companyConfig": false,
+        "displayOrder": 1,
+        "description": "clientId",
+        "active": true,
+        "type": "TEXTFIELD_32",
+        "resellerConfig": false,
+        "required": true,
+        "hideFromConsole": false,
+        "name": "Client Id",
+        "groupControl": false,
+        "key": "clientId"
+    }, {
+        "internal": false,
+        "defaultValue": "modifiedDate",
+        "companyConfig": false,
+        "displayOrder": 1,
+        "description": "Bulk query FieldName",
+        "active": true,
+        "type": "TEXTFIELD_128",
+        "resellerConfig": false,
+        "required": false,
+        "hideFromConsole": true,
+        "name": "Bulk query FieldName",
+        "groupControl": false,
+        "key": "bulk.query.field_name"
+    }, {
+        "internal": false,
+        "defaultValue": "1",
+        "companyConfig": false,
+        "displayOrder": 1,
+        "description": "ExactTartget Pagination Start Index",
+        "active": true,
+        "type": "TEXTFIELD_32",
+        "resellerConfig": false,
+        "required": false,
+        "hideFromConsole": true,
+        "name": "Pagination Start Index",
+        "groupControl": false,
+        "key": "pagination.page.startindex"
+    }, {
+        "internal": false,
+        "defaultValue": "JSON",
+        "companyConfig": false,
+        "displayOrder": 1,
+        "description": "Bulk Download Format",
+        "active": true,
+        "type": "TEXTFIELD_128",
+        "resellerConfig": false,
+        "required": false,
+        "hideFromConsole": true,
+        "name": "Bulk Download Format",
+        "groupControl": false,
+        "key": "bulk.query.download_format"
+    }, {
+        "internal": false,
+        "defaultValue": "",
+        "companyConfig": false,
+        "displayOrder": 2,
+        "description": "clientSecret",
+        "active": true,
+        "type": "TEXTFIELD_128",
+        "resellerConfig": false,
+        "required": true,
+        "hideFromConsole": false,
+        "name": "Client Secret",
+        "groupControl": false,
+        "key": "clientSecret"
+    }, {
+        "internal": false,
+        "defaultValue": "",
+        "companyConfig": false,
+        "displayOrder": 3,
+        "description": "requestToken",
+        "active": true,
+        "type": "TEXTFIELD_128",
+        "resellerConfig": false,
+        "required": false,
+        "hideFromConsole": true,
+        "name": "requestToken",
+        "groupControl": false,
+        "key": "requestToken"
+    }, {
+        "internal": false,
+        "defaultValue": "true",
+        "companyConfig": false,
+        "displayOrder": 51,
+        "description": "Used to enable/disable filtering of null values from the responses.",
+        "active": true,
+        "type": "BOOLEAN",
+        "resellerConfig": false,
+        "required": false,
+        "hideFromConsole": false,
+        "name": "Filter null values from the response",
+        "groupControl": false,
+        "key": "filter.response.nulls"
+    }, {
+        "internal": false,
+        "defaultValue": "",
+        "companyConfig": false,
+        "displayOrder": 100,
+        "description": "expires_in",
+        "active": true,
+        "type": "TEXTFIELD_128",
+        "resellerConfig": false,
+        "required": false,
+        "hideFromConsole": true,
+        "name": "expires_in",
+        "groupControl": false,
+        "key": "expires_in"
+    }, {
+        "internal": true,
+        "defaultValue": "",
+        "companyConfig": false,
+        "displayOrder": 100,
+        "description": "ExactTartget Time of Getting Token or Performing Authentication",
+        "active": true,
+        "type": "TEXTFIELD_128",
+        "resellerConfig": false,
+        "required": false,
+        "hideFromConsole": true,
+        "name": "Time of Getting Token or Performing Authentication",
+        "groupControl": false,
+        "key": "authentication.time"
+    }],
+    "description": "Add a Salesforce Marketing Cloud Instance to connect your existing Salesforce Marketing Cloud account to the Marketing Hub, allowing you to manage activities, campaigns, and contacts across multiple Marketing Elements and other Salesforce services. You will need your Salesforce Marketing Cloud account information to add an instance.",
+    "active": true,
+    "resources": [{
+        "nextPageKey": "",
+        "path": "/hubs/marketing/activities",
+        "vendorMethod": "GET",
+        "method": "GET",
+        "response": {
+            "contentType": "application/json"
+        },
+        "description": "Search for activities (interactions)",
+        "model": {
+            "transform": false,
+            "name": "activitiesList",
+            "rawSwagger": {
+                "defaults": {
+                    "id": "defaults",
+                    "properties": {
+                        "email": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "stats": {
+                    "id": "stats",
+                    "properties": {
+                        "currentPopulation": {
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "metGoal": {
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "goalPerformance": {
+                            "format": "double",
+                            "type": "number"
+                        },
+                        "cumulativePopulation": {
+                            "format": "int32",
+                            "type": "integer"
+                        }
+                    }
+                },
+                "activitiesList": {
+                    "id": "activitiesList",
+                    "type": "array",
+                    "items": {
+                        "$ref": "activitiesListObject"
+                    }
+                },
+                "activitiesListObject": {
+                    "id": "activitiesListObject",
+                    "properties": {
+                        "lastPublishedDate": {
+                            "type": "string"
+                        },
+                        "workflowApiVersion": {
+                            "format": "double",
+                            "type": "number"
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "executionMode": {
+                            "type": "string"
+                        },
+                        "version": {
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "createdDate": {
+                            "type": "string"
+                        },
+                        "defaults": {
+                            "type": "defaults"
+                        },
+                        "stats": {
+                            "type": "stats"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "modifiedDate": {
+                            "type": "string"
+                        },
+                        "id": {
+                            "type": "string"
+                        },
+                        "key": {
+                            "type": "string"
+                        },
+                        "entryMode": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "type": "string"
+                        },
+                        "definitionId": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "swagger": {
+                "defaults": {
+                    "id": "defaults",
+                    "properties": {
+                        "email": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "stats": {
+                    "id": "stats",
+                    "properties": {
+                        "currentPopulation": {
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "metGoal": {
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "goalPerformance": {
+                            "format": "double",
+                            "type": "number"
+                        },
+                        "cumulativePopulation": {
+                            "format": "int32",
+                            "type": "integer"
+                        }
+                    }
+                },
+                "activitiesList": {
+                    "id": "activitiesList",
+                    "type": "array",
+                    "items": {
+                        "$ref": "activitiesListObject"
+                    }
+                },
+                "activitiesListObject": {
+                    "id": "activitiesListObject",
+                    "properties": {
+                        "lastPublishedDate": {
+                            "type": "string"
+                        },
+                        "workflowApiVersion": {
+                            "format": "double",
+                            "type": "number"
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "executionMode": {
+                            "type": "string"
+                        },
+                        "version": {
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "createdDate": {
+                            "type": "string"
+                        },
+                        "defaults": {
+                            "type": "defaults"
+                        },
+                        "stats": {
+                            "type": "stats"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "modifiedDate": {
+                            "type": "string"
+                        },
+                        "id": {
+                            "type": "string"
+                        },
+                        "key": {
+                            "type": "string"
+                        },
+                        "entryMode": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "type": "string"
+                        },
+                        "definitionId": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "type": "api",
+        "vendorPath": "interaction/v1/interactions",
+        "parameters": [{
+            "vendorType": "query",
+            "dataType": "string",
+            "name": "page",
+            "description": "The number of pages to retrieve. The default is 1.",
+            "vendorDataType": "string",
+            "source": "request",
+            "vendorName": "$page",
+            "type": "query",
+            "required": false
+        }, {
+            "vendorType": "query",
+            "dataType": "string",
+            "converter": "toQueryParameters",
+            "name": "where",
+            "description": "The CEQL search expression.",
+            "vendorDataType": "string",
+            "source": "request",
+            "vendorName": "converter:toQueryParameters",
+            "type": "query",
+            "required": false
+        }, {
+            "vendorType": "query",
+            "dataType": "string",
+            "name": "orderBy",
+            "description": "Specify how to order the interactions. Valid ordering columns are: ModifiedDate (default), Name, Performance. Valid values are: DESC, ASC. The default is 'ModifiedDate DESC'.",
+            "vendorDataType": "string",
+            "source": "request",
+            "vendorName": "orderBy",
+            "type": "query",
+            "required": false
+        }, {
+            "vendorType": "query",
+            "dataType": "string",
+            "name": "pageSize",
+            "description": "The number of results to return on a page. The default and maximum is 50.",
+            "vendorDataType": "string",
+            "source": "request",
+            "vendorName": "$pageSize",
+            "type": "query",
+            "required": false
+        }],
+        "hooks": [],
+        "rootKey": "|items"
+    }, {
+        "nextPageKey": "",
+        "path": "/hubs/marketing/activities",
+        "vendorMethod": "POST",
+        "method": "POST",
+        "response": {
+            "contentType": "application/json"
+        },
+        "description": "Create an activity (interaction)",
+        "model": {
+            "requestName": "interactions",
+            "transform": false,
+            "name": "activities",
+            "rawSwagger": {
+                "defaults": {
+                    "id": "defaults",
+                    "properties": {
+                        "email": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "activities": {
+                    "id": "activities",
+                    "properties": {
+                        "lastPublishedDate": {
+                            "type": "string"
+                        },
+                        "workflowApiVersion": {
+                            "format": "double",
+                            "type": "number"
+                        },
+                        "executionMode": {
+                            "type": "string"
+                        },
+                        "version": {
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "createdDate": {
+                            "type": "string"
+                        },
+                        "defaults": {
+                            "type": "defaults"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "modifiedDate": {
+                            "type": "string"
+                        },
+                        "id": {
+                            "type": "string"
+                        },
+                        "key": {
+                            "type": "string"
+                        },
+                        "entryMode": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "type": "string"
+                        },
+                        "definitionId": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "swagger": {
+                "defaults": {
+                    "id": "defaults",
+                    "properties": {
+                        "email": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "activities": {
+                    "id": "activities",
+                    "properties": {
+                        "lastPublishedDate": {
+                            "type": "string"
+                        },
+                        "workflowApiVersion": {
+                            "format": "double",
+                            "type": "number"
+                        },
+                        "executionMode": {
+                            "type": "string"
+                        },
+                        "version": {
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "createdDate": {
+                            "type": "string"
+                        },
+                        "defaults": {
+                            "type": "defaults"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "modifiedDate": {
+                            "type": "string"
+                        },
+                        "id": {
+                            "type": "string"
+                        },
+                        "key": {
+                            "type": "string"
+                        },
+                        "entryMode": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "type": "string"
+                        },
+                        "definitionId": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "type": "api",
+        "vendorPath": "interaction/v1/interactions",
+        "parameters": [{
+            "vendorType": "body",
+            "dataType": "activities",
+            "name": "body",
+            "description": "The JSON body to create an activity (interaction)",
+            "vendorDataType": "string",
+            "source": "request",
+            "vendorName": "body",
+            "type": "body",
+            "required": true
+        }],
+        "hooks": [],
+        "rootKey": ""
+    }, {
+        "nextPageKey": "",
+        "path": "/hubs/marketing/activities",
+        "vendorMethod": "PUT",
+        "method": "PUT",
+        "response": {
+            "contentType": "application/json"
+        },
+        "description": "Update an activity (interaction)\\n\\n",
+        "model": {
+            "requestName": "string",
+            "transform": false,
+            "name": "activitiesUpdate",
+            "rawSwagger": {
+                "defaults": {
+                    "id": "defaults",
+                    "properties": {
+                        "email": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "stats": {
+                    "id": "stats",
+                    "properties": {
+                        "currentPopulation": {
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "metGoal": {
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "goalPerformance": {
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "cumulativePopulation": {
+                            "format": "int32",
+                            "type": "integer"
+                        }
+                    }
+                },
+                "activitiesUpdate": {
+                    "id": "activitiesUpdate",
+                    "properties": {
+                        "lastPublishedDate": {
+                            "type": "string"
+                        },
+                        "workflowApiVersion": {
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "executionMode": {
+                            "type": "string"
+                        },
+                        "version": {
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "createdDate": {
+                            "type": "string"
+                        },
+                        "defaults": {
+                            "type": "defaults"
+                        },
+                        "stats": {
+                            "type": "stats"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "modifiedDate": {
+                            "type": "string"
+                        },
+                        "id": {
+                            "type": "string"
+                        },
+                        "key": {
+                            "type": "string"
+                        },
+                        "entryMode": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "type": "string"
+                        },
+                        "definitionId": {
+                            "type": "string"
+                        }
+                    },
+                    "required": ["modifiedDate", "key", "version", "workflowApiVersion", "name"]
+                }
+            },
+            "swagger": {
+                "defaults": {
+                    "id": "defaults",
+                    "properties": {
+                        "email": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "stats": {
+                    "id": "stats",
+                    "properties": {
+                        "currentPopulation": {
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "metGoal": {
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "goalPerformance": {
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "cumulativePopulation": {
+                            "format": "int32",
+                            "type": "integer"
+                        }
+                    }
+                },
+                "activitiesUpdate": {
+                    "id": "activitiesUpdate",
+                    "properties": {
+                        "lastPublishedDate": {
+                            "type": "string"
+                        },
+                        "workflowApiVersion": {
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "executionMode": {
+                            "type": "string"
+                        },
+                        "version": {
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "createdDate": {
+                            "type": "string"
+                        },
+                        "defaults": {
+                            "type": "defaults"
+                        },
+                        "stats": {
+                            "type": "stats"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "modifiedDate": {
+                            "type": "string"
+                        },
+                        "id": {
+                            "type": "string"
+                        },
+                        "key": {
+                            "type": "string"
+                        },
+                        "entryMode": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "type": "string"
+                        },
+                        "definitionId": {
+                            "type": "string"
+                        }
+                    },
+                    "required": ["modifiedDate", "key", "version", "workflowApiVersion", "name"]
+                }
+            }
+        },
+        "type": "api",
+        "vendorPath": "interaction/v1/interactions/",
+        "parameters": [{
+            "vendorType": "body",
+            "dataType": "activitiesUpdate",
+            "name": "body",
+            "description": "JSON Body to update the interaction . In JSON body key is mandatory and modified date must match the current Database value from Marketing Cloud",
+            "vendorDataType": "string",
+            "source": "request",
+            "vendorName": "body",
+            "type": "body",
+            "required": true
+        }],
+        "hooks": [],
+        "rootKey": ""
+    }, {
+        "nextPageKey": "",
+        "path": "/hubs/marketing/activities/{id}",
+        "vendorMethod": "DELETE",
+        "method": "DELETE",
+        "response": {
+            "contentType": "application/json"
+        },
+        "description": "Delete an activity (interaction)\\n",
+        "type": "api",
+        "vendorPath": "interaction/v1/interactions/{id}",
+        "parameters": [{
+            "vendorType": "path",
+            "dataType": "string",
+            "name": "id",
+            "description": "The ID of the interaction to delete expressed in the form of a GUID (UUID)",
+            "vendorDataType": "string",
+            "source": "request",
+            "vendorName": "id",
+            "type": "path",
+            "required": true
+        }, {
+            "vendorType": "query",
+            "dataType": "integer",
+            "name": "versionNumber",
+            "description": "Version number of the interaction to delete. If no version is specified, ALL versions associated with the provided ID will be deleted.",
+            "vendorDataType": "integer",
+            "source": "request",
+            "vendorName": "versionNumber",
+            "type": "query",
+            "required": false
+        }],
+        "hooks": [],
+        "rootKey": ""
+    }, {
+        "nextPageKey": "",
+        "path": "/hubs/marketing/activities/{id}",
+        "vendorMethod": "GET",
+        "method": "GET",
+        "response": {
+            "contentType": "application/json"
+        },
+        "description": "Retrieve an activity (interaction)",
+        "model": {
+            "transform": false,
+            "name": "activities",
+            "rawSwagger": {
+                "defaults": {
+                    "id": "defaults",
+                    "properties": {
+                        "email": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "stats": {
+                    "id": "stats",
+                    "properties": {
+                        "currentPopulation": {
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "metGoal": {
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "goalPerformance": {
+                            "format": "double",
+                            "type": "number"
+                        },
+                        "cumulativePopulation": {
+                            "format": "int32",
+                            "type": "integer"
+                        }
+                    }
+                },
+                "activities": {
+                    "id": "activities",
+                    "properties": {
+                        "lastPublishedDate": {
+                            "type": "string"
+                        },
+                        "workflowApiVersion": {
+                            "format": "double",
+                            "type": "number"
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "executionMode": {
+                            "type": "string"
+                        },
+                        "version": {
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "createdDate": {
+                            "type": "string"
+                        },
+                        "defaults": {
+                            "type": "defaults"
+                        },
+                        "stats": {
+                            "type": "stats"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "modifiedDate": {
+                            "type": "string"
+                        },
+                        "id": {
+                            "type": "string"
+                        },
+                        "key": {
+                            "type": "string"
+                        },
+                        "entryMode": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "type": "string"
+                        },
+                        "definitionId": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "swagger": {
+                "defaults": {
+                    "id": "defaults",
+                    "properties": {
+                        "email": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "stats": {
+                    "id": "stats",
+                    "properties": {
+                        "currentPopulation": {
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "metGoal": {
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "goalPerformance": {
+                            "format": "double",
+                            "type": "number"
+                        },
+                        "cumulativePopulation": {
+                            "format": "int32",
+                            "type": "integer"
+                        }
+                    }
+                },
+                "activities": {
+                    "id": "activities",
+                    "properties": {
+                        "lastPublishedDate": {
+                            "type": "string"
+                        },
+                        "workflowApiVersion": {
+                            "format": "double",
+                            "type": "number"
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "executionMode": {
+                            "type": "string"
+                        },
+                        "version": {
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "createdDate": {
+                            "type": "string"
+                        },
+                        "defaults": {
+                            "type": "defaults"
+                        },
+                        "stats": {
+                            "type": "stats"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "modifiedDate": {
+                            "type": "string"
+                        },
+                        "id": {
+                            "type": "string"
+                        },
+                        "key": {
+                            "type": "string"
+                        },
+                        "entryMode": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "type": "string"
+                        },
+                        "definitionId": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "type": "api",
+        "vendorPath": "interaction/v1/interactions/{id}",
+        "parameters": [{
+            "vendorType": "query",
+            "dataType": "number",
+            "name": "versionNumber\t",
+            "description": "Version number of the interaction to retrieve. Default is 1.",
+            "vendorDataType": "number",
+            "source": "request",
+            "vendorName": "versionNumber\t",
+            "type": "query",
+            "required": false
+        }, {
+            "vendorType": "path",
+            "dataType": "string",
+            "name": "id",
+            "description": "The ID of the object to retrieve from the Marketing Automation system.",
+            "vendorDataType": "string",
+            "source": "request",
+            "vendorName": "id",
+            "type": "path",
+            "required": true
+        }],
+        "hooks": [],
+        "rootKey": ""
+    }, {
+        "nextPageKey": "",
+        "path": "/hubs/marketing/campaigns",
+        "vendorMethod": "GET",
+        "method": "GET",
+        "response": {
+            "contentType": "application/json"
+        },
+        "description": "Get a list of campaigns",
+        "model": {
+            "transform": false,
+            "name": "campaignsList",
+            "rawSwagger": {
+                "campaignsListObject": {
+                    "id": "campaignsListObject",
+                    "properties": {
+                        "createdDate": {
+                            "type": "string"
+                        },
+                        "color": {
+                            "type": "string"
+                        },
+                        "modifiedDate": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "id": {
+                            "type": "string"
+                        },
+                        "favorite": {
+                            "type": "boolean"
+                        },
+                        "campaignCode": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "campaignsList": {
+                    "id": "campaignsList",
+                    "type": "array",
+                    "items": {
+                        "$ref": "campaignsListObject"
+                    }
+                }
+            },
+            "swagger": {
+                "campaignsListObject": {
+                    "id": "campaignsListObject",
+                    "properties": {
+                        "createdDate": {
+                            "type": "string"
+                        },
+                        "color": {
+                            "type": "string"
+                        },
+                        "modifiedDate": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "id": {
+                            "type": "string"
+                        },
+                        "favorite": {
+                            "type": "boolean"
+                        },
+                        "campaignCode": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "campaignsList": {
+                    "id": "campaignsList",
+                    "type": "array",
+                    "items": {
+                        "$ref": "campaignsListObject"
+                    }
+                }
+            }
+        },
+        "type": "api",
+        "vendorPath": "hub/v1/campaigns",
+        "parameters": [{
+            "vendorType": "query",
+            "dataType": "string",
+            "name": "page",
+            "description": "The page number of resources to retrieve",
+            "vendorDataType": "string",
+            "source": "request",
+            "vendorName": "page",
+            "type": "query",
+            "required": false
+        }, {
+            "vendorType": "query",
+            "dataType": "string",
+            "name": "pageSize",
+            "description": "The number of resources to return in a given page",
+            "vendorDataType": "string",
+            "source": "request",
+            "vendorName": "pageSize",
+            "type": "query",
+            "required": false
+        }, {
+            "vendorType": "query",
+            "dataType": "string",
+            "name": "orderBy",
+            "description": "Defines the order of the data (Default value of ModifiedDate DESC). ",
+            "vendorDataType": "string",
+            "source": "request",
+            "vendorName": "orderBy",
+            "type": "query",
+            "required": false
+        }],
+        "hooks": [],
+        "rootKey": "|items"
+    }, {
+        "nextPageKey": "",
+        "path": "/hubs/marketing/campaigns",
+        "vendorMethod": "POST",
+        "method": "POST",
+        "response": {
+            "contentType": "application/json"
+        },
+        "description": "Create a campaign",
+        "model": {
+            "requestName": "string",
+            "transform": false,
+            "name": "campaigns",
+            "rawSwagger": {
+                "campaigns": {
+                    "id": "campaigns",
+                    "properties": {
+                        "createdDate": {
+                            "type": "string"
+                        },
+                        "color": {
+                            "type": "string"
+                        },
+                        "modifiedDate": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "id": {
+                            "type": "string"
+                        },
+                        "favorite": {
+                            "type": "boolean"
+                        },
+                        "campaignCode": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "swagger": {
+                "campaigns": {
+                    "id": "campaigns",
+                    "properties": {
+                        "createdDate": {
+                            "type": "string"
+                        },
+                        "color": {
+                            "type": "string"
+                        },
+                        "modifiedDate": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "id": {
+                            "type": "string"
+                        },
+                        "favorite": {
+                            "type": "boolean"
+                        },
+                        "campaignCode": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "type": "api",
+        "vendorPath": "hub/v1/campaigns",
+        "parameters": [{
+            "vendorType": "body",
+            "dataType": "campaigns",
+            "name": "campaign",
+            "description": "Json body  for creating new campaign.eg JSON {\"name\": \"Annual Sale 2012\",\"description\": \"Yearly sale\",\"campaignCode\": \"annual2012\", \"color\": \"0000ff\",\"favorite\": false }",
+            "vendorDataType": "string",
+            "source": "request",
+            "vendorName": "campaign",
+            "type": "body",
+            "required": true
+        }],
+        "hooks": [],
+        "rootKey": ""
+    }, {
+        "nextPageKey": "",
+        "path": "/hubs/marketing/campaigns/{id}",
+        "vendorMethod": "DELETE",
+        "method": "DELETE",
+        "response": {
+            "contentType": "application/json"
+        },
+        "description": "Delete a campaign",
+        "type": "api",
+        "vendorPath": "hub/v1/campaigns/{id}",
+        "parameters": [{
+            "vendorType": "path",
+            "dataType": "string",
+            "name": "id",
+            "description": "The ID of the campaign to delete in the Marketing Automation system.",
+            "vendorDataType": "string",
+            "source": "request",
+            "vendorName": "id",
+            "type": "path",
+            "required": true
+        }],
+        "hooks": [],
+        "rootKey": ""
+    }, {
+        "nextPageKey": "",
+        "path": "/hubs/marketing/campaigns/{id}",
+        "vendorMethod": "GET",
+        "method": "GET",
+        "response": {
+            "contentType": "application/json"
+        },
+        "description": "Retrieve a campaign ",
+        "model": {
+            "transform": false,
+            "name": "campaigns",
+            "rawSwagger": {
+                "campaigns": {
+                    "id": "campaigns",
+                    "properties": {
+                        "createdDate": {
+                            "type": "string"
+                        },
+                        "color": {
+                            "type": "string"
+                        },
+                        "modifiedDate": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "id": {
+                            "type": "string"
+                        },
+                        "favorite": {
+                            "type": "boolean"
+                        },
+                        "campaignCode": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "swagger": {
+                "campaigns": {
+                    "id": "campaigns",
+                    "properties": {
+                        "createdDate": {
+                            "type": "string"
+                        },
+                        "color": {
+                            "type": "string"
+                        },
+                        "modifiedDate": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "id": {
+                            "type": "string"
+                        },
+                        "favorite": {
+                            "type": "boolean"
+                        },
+                        "campaignCode": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "type": "api",
+        "vendorPath": "hub/v1/campaigns/{id}",
+        "parameters": [{
+            "vendorType": "path",
+            "dataType": "string",
+            "name": "id",
+            "description": "The ID of the campaign to retrieve from the Marketing Automation system.",
+            "vendorDataType": "string",
+            "source": "request",
+            "vendorName": "id",
+            "type": "path",
+            "required": true
+        }],
+        "hooks": [],
+        "rootKey": ""
+    }, {
+        "nextPageKey": "",
+        "path": "/hubs/marketing/contacts",
+        "vendorMethod": "POST",
+        "method": "GET",
+        "response": {
+            "contentType": "application/json"
+        },
+        "description": "Search for contacts",
+        "model": {
+            "transform": false,
+            "name": "contactsList",
+            "rawSwagger": {
+                "contactsList": {
+                    "id": "contactsList",
+                    "type": "array",
+                    "items": {
+                        "$ref": "contactsListObject"
+                    }
+                },
+                "contactsListObject": {
+                    "id": "contactsListObject",
+                    "properties": {
+                        "contactID": {
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "contactKey": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "swagger": {
+                "contactsList": {
+                    "id": "contactsList",
+                    "type": "array",
+                    "items": {
+                        "$ref": "contactsListObject"
+                    }
+                },
+                "contactsListObject": {
+                    "id": "contactsListObject",
+                    "properties": {
+                        "contactID": {
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "contactKey": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "type": "api",
+        "vendorPath": "contacts/v1/contacts/search",
+        "parameters": [{
+            "vendorType": "no-op",
+            "dataType": "string",
+            "name": "page",
+            "description": "The page number of resources to retrieve",
+            "vendorDataType": "string",
+            "source": "request",
+            "vendorName": "page",
+            "type": "query",
+            "required": false
+        }, {
+            "vendorType": "query",
+            "dataType": "string",
+            "converter": "toQueryParameters",
+            "name": "where",
+            "description": "The CEQL search expression, used to search for provided attributes. If there are spaces in the attribute you need to include the backtick. For example: <i> where=\\`Email Addresses.Email Address\\` = 'email@example.com' <\/i> ",
+            "vendorDataType": "string",
+            "source": "request",
+            "vendorName": "converter:toQueryParameters",
+            "type": "query",
+            "required": false
+        }, {
+            "vendorType": "no-op",
+            "dataType": "string",
+            "name": "pageSize",
+            "description": "The number of resources to return in a given page",
+            "vendorDataType": "string",
+            "source": "request",
+            "vendorName": "pageSize",
+            "type": "query",
+            "required": false
+        }],
+        "hooks": [{
+            "isLegacy": false,
+            "mimeType": "application/javascript",
+            "type": "preRequest",
+            "body": "let queryTemplate = \"{\\\"attribute\\\":{\\\"key\\\":\\\"{key}\\\",\\\"id\\\":\\\"\\\",\\\"isCustomerData\\\":false},\\\"operator\\\":\\\"Equals\\\",\\\"value\\\":{\\\"items\\\":[\\\"{value}\\\"]}}\";\nlet fullQuery = \"{\\\"conditionSet\\\":{\\\"operator\\\":\\\"And\\\",\\\"conditionSets\\\":[],\\\"conditions\\\":[{conditions}]}}\";\nlet conditions = \"\";\nif (request_vendor_parameters) {\n\tconsole.log(request_vendor_parameters);\n\tlet expressions = request_vendor_parameters;\n\tlet keys = Object.keys(expressions);\t\n\tlet i = 0;\n\tfor (let key of keys) {\n\t\tlet query = queryTemplate.replace(\"{key}\", key);\n\t\tquery = query.replace(\"{value}\", expressions[key]);\n\t\tif (i + 1 < keys.length) {\n\t\t\tquery += \",\"\n\t\t}\n\t\tconditions += query;\n\t}\n\tfullQuery = fullQuery.replace(\"{conditions}\", conditions);\n\tdone({\n\t\t\"request_vendor_body\": fullQuery\n\t});\n} else {\n\tdone();\n}"
+        }],
+        "rootKey": "|items"
+    }, {
+        "nextPageKey": "",
+        "path": "/hubs/marketing/contacts",
+        "vendorMethod": "POST",
+        "method": "POST",
+        "response": {
+            "contentType": "application/json"
+        },
+        "description": "Creates a contact",
+        "model": {
+            "requestName": "contacts",
+            "transform": false,
+            "name": "contacts",
+            "rawSwagger": {
+                "values": {
+                    "id": "values",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "value": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "attributeSets": {
+                    "id": "attributeSets",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "items": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "items"
+                            }
+                        }
+                    }
+                },
+                "items": {
+                    "id": "items",
+                    "properties": {
+                        "values": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "values"
+                            }
+                        }
+                    }
+                },
+                "contacts": {
+                    "id": "contacts",
+                    "properties": {
+                        "contactKey": {
+                            "type": "string"
+                        },
+                        "attributeSets": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "attributeSets"
+                            }
+                        }
+                    }
+                }
+            },
+            "requestSwagger": {
+                "values": {
+                    "id": "values",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "value": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "attributeSets": {
+                    "id": "attributeSets",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "items": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "items"
+                            }
+                        }
+                    }
+                },
+                "items": {
+                    "id": "items",
+                    "properties": {
+                        "values": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "values"
+                            }
+                        }
+                    }
+                },
+                "contacts": {
+                    "id": "contacts",
+                    "properties": {
+                        "contactKey": {
+                            "type": "string"
+                        },
+                        "attributeSets": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "attributeSets"
+                            }
+                        }
+                    }
+                }
+            },
+            "swagger": {
+                "values": {
+                    "id": "values",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "value": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "attributeSets": {
+                    "id": "attributeSets",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "items": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "items"
+                            }
+                        }
+                    }
+                },
+                "items": {
+                    "id": "items",
+                    "properties": {
+                        "values": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "values"
+                            }
+                        }
+                    }
+                },
+                "contacts": {
+                    "id": "contacts",
+                    "properties": {
+                        "contactKey": {
+                            "type": "string"
+                        },
+                        "attributeSets": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "attributeSets"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "type": "api",
+        "vendorPath": "contacts/v1/contacts",
+        "parameters": [{
+            "vendorType": "body",
+            "dataType": "contacts",
+            "name": "body",
+            "description": "Json body to create the new contacts. eg{     \"contactKey\": \"acruz@example.com\",     \"attributeSets\": [{ \"name\": \"MobileConnect Demographics\" ,\"items\": [{\"values\": [{ \"name\": \"Mobile Number\", \"value\": \"317-531-5555\"},{ \"name\": \"Locale\",\"value\": \"US\" },{ \"name\": \"Status\", \"value\": 1}] }] }]}",
+            "vendorDataType": "object",
+            "source": "request",
+            "vendorName": "body",
+            "type": "body",
+            "required": true
+        }],
+        "hooks": [],
+        "rootKey": ""
+    }, {
+        "nextPageKey": "",
+        "path": "/hubs/marketing/contacts/{id}",
+        "vendorMethod": "PATCH",
+        "method": "PATCH",
+        "response": {
+            "contentType": "application/json"
+        },
+        "description": "Update a contact",
+        "model": {
+            "requestName": "contacts",
+            "transform": false,
+            "name": "contacts",
+            "rawSwagger": {
+                "values": {
+                    "id": "values",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "value": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "attributeSets": {
+                    "id": "attributeSets",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "items": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "items"
+                            }
+                        }
+                    }
+                },
+                "items": {
+                    "id": "items",
+                    "properties": {
+                        "values": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "values"
+                            }
+                        }
+                    }
+                },
+                "contacts": {
+                    "id": "contacts",
+                    "properties": {
+                        "contactKey": {
+                            "type": "string"
+                        },
+                        "attributeSets": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "attributeSets"
+                            }
+                        }
+                    }
+                }
+            },
+            "requestSwagger": {
+                "values": {
+                    "id": "values",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "value": {
+                            "format": "int32",
+                            "type": "integer"
+                        }
+                    }
+                },
+                "attributeSets": {
+                    "id": "attributeSets",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "items": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "items"
+                            }
+                        }
+                    }
+                },
+                "items": {
+                    "id": "items",
+                    "properties": {
+                        "values": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "values"
+                            }
+                        }
+                    }
+                },
+                "contacts": {
+                    "id": "contacts",
+                    "properties": {
+                        "contactKey": {
+                            "type": "string"
+                        },
+                        "attributeSets": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "attributeSets"
+                            }
+                        }
+                    }
+                }
+            },
+            "swagger": {
+                "values": {
+                    "id": "values",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "value": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "attributeSets": {
+                    "id": "attributeSets",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "items": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "items"
+                            }
+                        }
+                    }
+                },
+                "items": {
+                    "id": "items",
+                    "properties": {
+                        "values": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "values"
+                            }
+                        }
+                    }
+                },
+                "contacts": {
+                    "id": "contacts",
+                    "properties": {
+                        "contactKey": {
+                            "type": "string"
+                        },
+                        "attributeSets": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "attributeSets"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "type": "api",
+        "vendorPath": "contacts/v1/contacts",
+        "parameters": [{
+            "vendorType": "bodyField",
+            "dataType": "string",
+            "name": "id",
+            "description": "The whatever ID",
+            "vendorDataType": "string",
+            "source": "request",
+            "vendorName": "contactID",
+            "type": "path",
+            "required": true
+        }, {
+            "vendorType": "body",
+            "dataType": "contacts",
+            "name": "body",
+            "description": "The contact json body . e.g updated JSON{\"contactKey\": \"acruz@example.com\",     \"attributeSets\": [ \"name\": \"MobilePush Demographics\", \"items\": [ \"values\": [{ \"name\": \"Device ID\",\"value\": 958405948},{ \"name\": \"Application\",\"value\": 958405948 }]}]}] }",
+            "vendorDataType": "string",
+            "source": "request",
+            "vendorName": "body",
+            "type": "body",
+            "required": true
+        }],
+        "hooks": []
+    }, {
+        "nextPageKey": "",
+        "path": "/hubs/marketing/requestToken",
+        "vendorMethod": "POST",
+        "method": "POST",
+        "response": {
+            "contentType": "application/json"
+        },
+        "description": "Create a new campaign in the Marketing Automation service. Campaign creation will flow through Cloud Elements to your Marketing Automation service. With the exception of the 'id' field, the required fields indicated in the 'Campaign' model are those required to create a new campaign.",
+        "type": "provisionAuthValidation",
+        "vendorPath": "https://auth.exacttargetapis.com/v1/requestToken",
+        "parameters": [{
+            "vendorType": "bodyField",
+            "dataType": "string",
+            "name": "clientSecret",
+            "vendorDataType": "string",
+            "source": "request",
+            "vendorName": "clientSecret",
+            "type": "configuration",
+            "required": false
+        }, {
+            "vendorType": "bodyField",
+            "dataType": "string",
+            "name": "clientId",
+            "description": "The campaign object to be created.<br>With the exception of the 'id' field, the required fields indicated in the 'Campaign' model are those required to create a new campaign.",
+            "vendorDataType": "string",
+            "source": "request",
+            "vendorName": "clientId",
+            "type": "configuration",
+            "required": true
+        }, {
+            "vendorType": "bodyField",
+            "dataType": "integer",
+            "name": "expires_in",
+            "vendorDataType": "integer",
+            "source": "response",
+            "vendorName": "expiresIn",
+            "type": "configuration",
+            "required": false
+        }, {
+            "vendorType": "bodyField",
+            "dataType": "string",
+            "name": "requestToken",
+            "vendorDataType": "string",
+            "source": "response",
+            "vendorName": "accessToken",
+            "type": "configuration",
+            "required": false
+        }],
+        "hooks": [],
+        "rootKey": ""
+    }],
+    "protocolType": "http",
+    "cloneable": true,
+    "transformationsEnabled": true,
+    "bulkDownloadEnabled": true,
+    "deleted": false,
+    "hub": "marketing",
+    "typeOauth": false,
+    "name": "Salesforce Marketing Cloud",
+    "trialAccount": false,
+    "hooks": [{
+        "isLegacy": false,
+        "mimeType": "application/javascript",
+        "type": "preRequest",
+        "body": "var key = \"Bearer \"+ configuration['requestToken'];\nrequest_vendor_headers[\"Authorization\"] = key;\t\n\ndone({\t\t\n\t\"request_vendor_headers\": request_vendor_headers\t\t\n});"
+    }],
+    "parameters": [{
+        "vendorType": "header",
+        "name": "requestToken",
+        "source": "request",
+        "vendorName": "Authorization",
+        "type": "configuration",
+        "required": false
+    }],
+    "key": "salesforcemarketingcloud",
+    "authentication": {
+        "type": "custom"
+    }
+}

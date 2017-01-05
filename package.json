@@ -1,0 +1,21 @@
+{
+  "name": "dmitri",
+  "version": "1.0.0",
+  "description": "The periodic law for Cloud Elements",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axel": "0.0.3",
+    "deep-diff": "^0.3.4",
+    "json-diff": "^0.3.1",
+    "prompt": "^1.0.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
