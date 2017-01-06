@@ -26,17 +26,20 @@ describe('Element Reader', () => {
     });
   });
   describe('#getCRUDS', () => {
-    it('should return an object with one top level key of the requested resource', () => {
-      elementReader.getCRUDS('activities', element).should.have.property('activities');
-      Object.keys(elementReader.getCRUDS('activities', element)).should.have.lengthOf(1);
+    it('should return an object with two top level keys: {name: "string", methods: object}', () => {
+      Object.keys(elementReader.getCRUDS('activities', element)).should.have.lengthOf(2);
+      elementReader.getCRUDS('activities', element).should.have.property('resourceName');
+      elementReader.getCRUDS('activities', element).resourceName.should.be.a('string');
+      elementReader.getCRUDS('activities', element).should.have.property('methods');
+      elementReader.getCRUDS('activities', element).methods.should.be.a('object');
     });
     it('should return object with second level keys of CRUDS', () => {
       let objectToTest = elementReader.getCRUDS('activities', element);
-      objectToTest.activities.should.have.property('CREATE');
-      objectToTest.activities.should.have.property('RETRIEVE');
-      objectToTest.activities.should.have.property('UPDATE');
-      objectToTest.activities.should.have.property('DESTROY');
-      objectToTest.activities.should.have.property('SELECT');
+      objectToTest.methods.should.have.property('CREATE');
+      objectToTest.methods.should.have.property('RETRIEVE');
+      objectToTest.methods.should.have.property('UPDATE');
+      objectToTest.methods.should.have.property('DESTROY');
+      objectToTest.methods.should.have.property('SELECT');
     });
   });
 });

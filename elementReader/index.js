@@ -22,7 +22,8 @@ function getCRUDS (resourceName, elementJSON) {
     // check that valid resourceName has been specified
     if (resourceName && (typeof resourceName === 'string') && (resourceName.length > 0)) {
       let resourceCRUDS = {};
-      resourceCRUDS[resourceName] = {};
+      resourceCRUDS.resourceName = resourceName;
+      resourceCRUDS.methods = {};
       let count = 0;
       elementJSON.resources.forEach((resource) => {
         // check current resource in loop for match
@@ -38,25 +39,26 @@ function getCRUDS (resourceName, elementJSON) {
             case 'GET':
               // check if RETRIEVE or SELECT
               if (resourceProperties.path.indexOf('{') > 0){
-                resourceCRUDS[resourceName].SELECT = resourceProperties;
+                resourceCRUDS.methods.SELECT = resourceProperties;
               } else {
-                resourceCRUDS[resourceName].RETRIEVE = resourceProperties;
+                resourceCRUDS.methods.RETRIEVE = resourceProperties;
               }
               break;
             case 'POST':
-              resourceCRUDS[resourceName].CREATE = resourceProperties;
+              resourceCRUDS.methods.CREATE = resourceProperties;
               break;
             case 'PUT':
             case 'PATCH':
-              resourceCRUDS[resourceName].UPDATE = resourceProperties;
+              resourceCRUDS.methods.UPDATE = resourceProperties;
               break;
             case 'DELETE':
-              resourceCRUDS[resourceName].DESTROY = resourceProperties;
+              resourceCRUDS.methods.DESTROY = resourceProperties;
               break;
           }
           count++;
         }
       }); // end of forEach loop of resources
+      console.log(resourceCRUDS);
       return resourceCRUDS;
     } else {
       throw "invalid resource name or none was specified";
