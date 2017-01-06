@@ -4,6 +4,7 @@ const compareJSON = require('deep-diff').diff;
 const getResources = require('./elementReader').getResources;
 const getCRUDS = require('./elementReader').getCRUDS;
 const combineResources = require('./compareElements').combine;
+const combineCRUDS = require('./compareElements').combineCRUDS;
 
 const ctx = require('axel');
 
@@ -26,8 +27,14 @@ Object.keys(newResources).forEach((resourceName) => {
   newCompiledCRUDS.push(getCRUDS(resourceName, newJson));
 });
 
+console.log(oldCompiledCRUDS);
+
 // combine resources into one object for comparing
-let results = combineResources(oldResources, newResources);
+// let results = combineCRUDS(oldCompiledCRUDS, newCompiledCRUDS);
+// console.log(results);
+
+// combine resources into one object for comparing
+// let results = combineResources(oldResources, newResources);
 
 // // render in console
 // ctx.clear();
