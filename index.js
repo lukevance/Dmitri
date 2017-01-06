@@ -6,7 +6,7 @@ const getCRUDS = require('./elementReader').getCRUDS;
 const combineResources = require('./compareElements').combine;
 const combineCRUDS = require('./compareElements').combineCRUDS;
 
-const ctx = require('axel');
+const render = require('./render');
 
 // get path names for files from arguments
 let oldJson = require(process.argv[2]);
@@ -22,62 +22,44 @@ Object.keys(oldResources).forEach((resourceName) => {
   oldCompiledCRUDS.push(getCRUDS(resourceName, oldJson));
 });
 
-let newCompiledCRUDS = [];
+let newCRUDS = [];
 Object.keys(newResources).forEach((resourceName) => {
-  newCompiledCRUDS.push(getCRUDS(resourceName, newJson));
+  newCRUDS.push(getCRUDS(resourceName, newJson));
 });
 
-console.log(oldCompiledCRUDS);
-
-// combine resources into one object for comparing
-// let results = combineCRUDS(oldCompiledCRUDS, newCompiledCRUDS);
-// console.log(results);
+// combine resourceCRUDS into one object for comparing
+let results = combineCRUDS(oldCompiledCRUDS, newCRUDS);
+console.log(results);
 
 // combine resources into one object for comparing
 // let results = combineResources(oldResources, newResources);
 
-// // render in console
-// ctx.clear();
-// // set up headers
-// ctx.text(1, 1, "Resource");
-// ctx.text(25, 1, "Old");
-// ctx.text(50, 1, "New");
-// // print content
-// let lineNum = 2;
-// results.forEach((resourceName) => {
-//   ctx.text(1, lineNum, resourceName.resource);
-//   if (resourceName.old){
-//     ctx.fg(35, 155, 35);
-//     ctx.text(25, lineNum, resourceName.old.toString());
-//   } else {
-//
-//   }
-//   ctx.text(50, lineNum, resourceName.new.toString());
-//   lineNum++;
-// });
-// ctx.cursor.restore();
+// get longest resource
+// let longestResource = longResource(results);
+// render in console
+render.compareGraph(results);
 
 //
 // let differences = compareJSON(oldResources, newResources);
 // //
 // console.log(differences);
-
-let result = [
-  {
-    resource: 'name',
-    old: {
-       Create: {
-         path: '',
-         method: '',
-         description: ''
-       },
-       Retrieve: {},
-       Destroy: {}
-     },
-    new: {
-      Create: {
-        changed: ['list of changed properties']
-      }
-    }
-  }
-];
+//
+// let result = [
+//   {
+//     resource: 'name',
+//     old: {
+//        Create: {
+//          path: '',
+//          method: '',
+//          description: ''
+//        },
+//        Retrieve: {},
+//        Destroy: {}
+//      },
+//     new: {
+//       Create: {
+//         changed: ['list of changed properties']
+//       }
+//     }
+//   }
+// ];
