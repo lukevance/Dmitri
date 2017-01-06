@@ -58,7 +58,6 @@ function getCRUDS (resourceName, elementJSON) {
           count++;
         }
       }); // end of forEach loop of resources
-      console.log(resourceCRUDS);
       return resourceCRUDS;
     } else {
       throw "invalid resource name or none was specified";

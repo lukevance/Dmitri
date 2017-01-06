@@ -26,32 +26,38 @@ function combineResources (oldResources, newResources){
 
 function combineCRUDS (oldCompiledCRUDS, newCompiledCRUDS){
   let results = [];
+  let addedResources = {};
   // loop through old CRUDS
   oldCompiledCRUDS.forEach((resource) => {
-    // console.log(resource);
+    // create compared object
     let comparedResource = {
       resource: resource.resourceName,
       old: resource.methods
     };
-    // ----------- THIS IS WHERE I LEFT OFF!! ---------------
-    newCompiledCRUDS.forEach((newResource) => {
+    // check new CRUDS for matching resource
+    for (let i = 0; i < newCompiledCRUDS.length; i++){
+      let newResource = newCompiledCRUDS[i];
+      // if resource exists in new CRUDS add to comparedResource
       if (comparedResource.resource === newResource.resourceName) {
-        
+        comparedResource.new = newResource.methods;
+        // delete newCompiledCRUDS[i];
       }
-    });
-    if (newCompiledCRUDS.hasOwnProperty(resource)){
-      comparedResource.new = true;
-      delete newCompiledCRUDS[resource];
     }
+    // add resource to results array
     results.push(comparedResource);
-  });
-  Object.keys(newResources).forEach((resource) => {
-    results.push({
-      resource: resource,
-      new: true,
-      old: false
-    });
-  });
+    // track name of resource as already checked
+    addedResources[comparedResource.resource] = true;
+  }); //end of oldCRUDS loop
+
+  // check new CRUDS for additional resources
+  newCompiledCRUDS.forEach((newResource) => {
+    if (!addedResources[newResource.resourceName]){
+      results.push({
+        resource: newResource.resourceName,
+        new: newResource.methods
+      });
+    }
+  }); // end of newCRUDS loop
   return results;
 }
 
