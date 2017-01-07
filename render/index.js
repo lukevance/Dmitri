@@ -23,7 +23,7 @@ function compareGraph (resultsArray){
   ctx.text(3, 2, "Resource");
   ctx.text(25, 2, "Old");
   ctx.text(40, 2, "New");
-  ctx.text(55, 2, "Changes");
+  ctx.text(55, 2, "Additions");
   // print content
   let lineNum = 3;
   resultsArray.forEach((resourceName) => {

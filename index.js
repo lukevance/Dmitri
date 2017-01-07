@@ -29,15 +29,24 @@ Object.keys(newResources).forEach((resourceName) => {
 
 // combine resourceCRUDS into one object for comparing
 let results = combineCRUDS(oldCompiledCRUDS, newCRUDS);
-console.log(results);
+// console.log(results[0]["old"].CREATE.definition);
 
-// combine resources into one object for comparing
-// let results = combineResources(oldResources, newResources);
+// compare properties
+// let differences = compareJSON(results[4]["old"].CREATE.definition, results[4]["new"].CREATE.definition);
+// console.log(results[0]["old"].CREATE.definition);
+// console.log(differences);
+// results[4]
 
 // get longest resource
 // let longestResource = longResource(results);
+
+
 // render in console
 render.compareGraph(results);
+
+
+
+// console.log(results[4]);
 
 //
 // let differences = compareJSON(oldResources, newResources);
@@ -51,7 +60,7 @@ render.compareGraph(results);
 //        Create: {
 //          path: '',
 //          method: '',
-//          description: ''
+//          definition: ''
 //        },
 //        Retrieve: {},
 //        Destroy: {}

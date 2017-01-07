@@ -32,7 +32,7 @@ function getCRUDS (resourceName, elementJSON) {
           let resourceProperties = {
             path: resource.path,
             method: resource.method,
-            description: resource.description
+            definition: resource
           };
           // based on method, add properties to resourceCRUDS
           switch(resource.method) {
