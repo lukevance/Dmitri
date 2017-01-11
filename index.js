@@ -1,10 +1,10 @@
 "use strict";
 
-const compareJSON = require('deep-diff').diff;
 const getResources = require('./elementReader').getResources;
 const getCRUDS = require('./elementReader').getCRUDS;
 const combineResources = require('./compareElements').combine;
 const combineCRUDS = require('./compareElements').combineCRUDS;
+require('make-runnable');
 
 const render = require('./render');
 
@@ -29,46 +29,24 @@ Object.keys(newResources).forEach((resourceName) => {
 
 // combine resourceCRUDS into one object for comparing
 let results = combineCRUDS(oldCompiledCRUDS, newCRUDS);
-// console.log(results[0]["old"].CREATE.definition);
-
-// compare properties
-// let differences = compareJSON(results[4]["old"].CREATE.definition, results[4]["new"].CREATE.definition);
-// console.log(results[0]["old"].CREATE.definition);
-// console.log(differences);
-// results[4]
+// console.log(results[0]);
 
 // get longest resource
 // let longestResource = longResource(results);
 
 
-// render in console
-render.compareGraph(results);
+// render general compare in console
+function dmCruds () {
+  render.compareGraph(results);
+}
+
+// render resource changes
+function dmResource (resource) {
+  render.compareResource(0, results, resource);
+}
 
 
-
-// console.log(results[4]);
-
-//
-// let differences = compareJSON(oldResources, newResources);
-// //
-// console.log(differences);
-//
-// let result = [
-//   {
-//     resource: 'name',
-//     old: {
-//        Create: {
-//          path: '',
-//          method: '',
-//          definition: ''
-//        },
-//        Retrieve: {},
-//        Destroy: {}
-//      },
-//     new: {
-//       Create: {
-//         changed: ['list of changed properties']
-//       }
-//     }
-//   }
-// ];
+module.exports = {
+  resource: dmResource,
+  cruds: dmCruds
+};

@@ -32,6 +32,12 @@ function fg (color) {
     case 'green':
       ctx.fg(35, 155, 35);
       break;
+    case 'yellow':
+      ctx.fg(215, 207, 96);
+      break;
+    case 'red':
+      ctx.fg(213, 79, 35);
+      break;
   }
 }
 
