@@ -7,7 +7,7 @@
     "test": "mocha"
   },
   "bin": {
-    "dmitri": "./index.js"
+    "dmitri": "cli/dmitri.js"
   },
   "author": "",
   "license": "ISC",
