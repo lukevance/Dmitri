@@ -1,14 +1,6 @@
-'use strict';
+"use strict";
 
-// const commander = require('commander');
-//
-// commander
-//   .version('0.0.1')
-//   .command('cruds', 'initalize churros')
-//   .command('resource', 'add a new test suite')
-//   .parse(process.argv);
-
-// const commander = require('commander');
+const program = require('commander');
 
 const getResources = require('./elementReader').getResources;
 const getCRUDS = require('./elementReader').getCRUDS;
@@ -37,17 +29,8 @@ Object.keys(newResources).forEach((resourceName) => {
 
 // combine resourceCRUDS into one object for comparing
 let results = combineCRUDS(oldCompiledCRUDS, newCRUDS);
-// console.log(results[0]);
-
-// get longest resource
-// let longestResource = longResource(results);
 
 // render resource changes
 // function dmResource (resource) {
   render.compareResource(0, results, process.argv[2]);
-// }
-
-// render general compare in console
-// function dmCruds () {
-  // render.compareGraph(results);
 // }

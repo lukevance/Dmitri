@@ -6,10 +6,14 @@
   "scripts": {
     "test": "mocha"
   },
+  "bin": {
+    "dmitri": "./index.js"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "axel": "0.0.3",
+    "commander": "^2.9.0",
     "deep-diff": "^0.3.4",
     "json-diff": "^0.3.1",
     "prompt": "^1.0.0"

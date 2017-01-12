@@ -1,14 +1,6 @@
-'use strict';
+"use strict";
 
-// const commander = require('commander');
-//
-// commander
-//   .version('0.0.1')
-//   .command('cruds', 'initalize churros')
-//   .command('resource', 'add a new test suite')
-//   .parse(process.argv);
-
-// const commander = require('commander');
+const program = require('commander');
 
 const getResources = require('./elementReader').getResources;
 const getCRUDS = require('./elementReader').getCRUDS;
@@ -17,8 +9,8 @@ const combineCRUDS = require('./compareElements').combineCRUDS;
 const render = require('./render');
 
 // get path names for files from arguments
-let oldJson = require(process.argv[3]);
-let newJson = require(process.argv[4]);
+let oldJson = require(process.argv[2]);
+let newJson = require(process.argv[3]);
 
 // strip resources from element JSON
 let oldResources = getResources(oldJson);
@@ -42,12 +34,14 @@ let results = combineCRUDS(oldCompiledCRUDS, newCRUDS);
 // get longest resource
 // let longestResource = longResource(results);
 
-// render resource changes
-// function dmResource (resource) {
-  render.compareResource(0, results, process.argv[2]);
-// }
 
 // render general compare in console
 // function dmCruds () {
-  // render.compareGraph(results);
+//   render.compareGraph(results);
 // }
+
+// program
+//   .action(() => {
+//     render.compareGraph(results);
+//   })
+//   .parse(process.argv);
