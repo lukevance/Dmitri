@@ -6,6 +6,8 @@ const commander = require('commander');
 
 commander
   .version('0.0.1')
-  .command('cruds', 'compare cruds for files')
-  .command('resource', 'compare all resources')
+  .command('init', 'sets up environment for comparing')
+  .command('compare <elementkey>', 'compares elements to other elements or hubs')
+  // .command('normalize <elementkey> [hub || element]', 'compares element resources to hub or other element')
+  // .command('resources [elementFilePath]', 'this is still a test')
   .parse(process.argv);
