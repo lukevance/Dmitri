@@ -7,12 +7,36 @@ const chalk = require('chalk');
 
 let prefs = new Preferences('dmitri');
 
+let defaults = {
+  Production: {
+    url: 'console.cloud-elements.com'
+  },
+  Staging: {
+    url: 'staging.cloud-elements.com'
+  },
+  Development: {
+    url: 'localhost:8080'
+  }
+}
+
 //TODO add url value for development environment
 
 // function to get creds for given environemt
 let getCreds = function (environments, start, prefs) {
   let currEnv = start;
   let questions = [
+    {
+      name: 'url',
+      type: 'url',
+      message: 'Set the base url: ',
+      validate: function(value) {
+        if (value.length) {
+          return true;
+        } else {
+          return 'Please enter a base URL';
+        }
+      }
+    },
     {
       name: 'username',
       type: 'input',
@@ -40,6 +64,14 @@ let getCreds = function (environments, start, prefs) {
   ];
 
   console.log(chalk.blue("Set up your " + environments[currEnv] + " environment"));
+  questions.forEach((q) => {
+    // console.log(q.name);
+    // console.log(defaults[environments[currEnv]][q.name]);
+    if (defaults.hasOwnProperty(environments[currEnv]) && defaults[environments[currEnv]].hasOwnProperty(q.name)) {
+      q.default = defaults[environments[currEnv]][q.name];
+      console.log(q.default);
+    }
+  });
   inquirer.prompt(questions)
     .then((answers) => {
       prefs[environments[currEnv]] = answers;

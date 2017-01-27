@@ -10,4 +10,5 @@ commander
   .command('compare', 'compares elements to other elements or hubs')
   .command('add', 'adds properties to temporary publish list')
   .command('publish <elementkey>', 'generates sql for staged changes to element')
+  .command('settings', 'displays current settings from initialization')
   .parse(process.argv);
