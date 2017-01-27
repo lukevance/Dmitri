@@ -45,6 +45,17 @@ function requestStuff (stuff) {
   console.log(stuff);
 }
 
+const requester = require('./apiHandler');
+
+function logstuff (content) {
+  console.log('name: ' + content.name);
+  console.log('description' + content.description);
+  console.log('key: ' + content.key);
+  console.log(content.resources.length);
+}
+
+// requester.getProdElement('gooddata', logstuff);
+
 module.exports = {
   resources: dmResource,
   cruds: dmCruds,

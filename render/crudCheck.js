@@ -14,7 +14,7 @@ function checkCreate (resourceName, lineNum) {
 
   fg('lightest');
   // check new for CREATE
-  if (resourceName.new.CREATE){
+  if (resourceName.new && resourceName.new.CREATE){
     fg('green');
   }
   ctx.text(37, lineNum, 'C');
@@ -30,7 +30,7 @@ function checkRetrieve (resourceName, lineNum) {
   ctx.text(24, lineNum, 'R');
   fg('lightest');
   // check new for CREATE
-  if (resourceName.new.RETRIEVE){
+  if (resourceName.new && resourceName.new.RETRIEVE){
     fg('green');
   }
   ctx.text(39, lineNum, 'R');
@@ -46,7 +46,7 @@ function checkUpdate (resourceName, lineNum) {
 
   fg('lightest');
   // check new for CREATE
-  if (resourceName.new.UPDATE){
+  if (resourceName.new && resourceName.new.UPDATE){
     fg('green');
   }
   ctx.text(41, lineNum, 'U');
@@ -62,7 +62,7 @@ function checkDestroy (resourceName, lineNum) {
 
   // check new for CREATE
   fg('lightest');
-  if (resourceName.new.DESTROY){
+  if (resourceName.new && resourceName.new.DESTROY){
     fg('green');
   }
   ctx.text(43, lineNum, 'D');
@@ -78,7 +78,7 @@ function checkSelect (resourceName, lineNum) {
 
   // check new for CREATE
   fg('lightest');
-  if (resourceName.new.SELECT){
+  if (resourceName.new && resourceName.new.SELECT){
     fg('green');
   }
   ctx.text(45, lineNum, 'S');

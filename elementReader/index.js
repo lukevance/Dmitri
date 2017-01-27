@@ -6,13 +6,19 @@ function getHub (elementJSON) {
 
 function getResources (elementJSON) {
   let resources = {};
-  elementJSON.resources.forEach((resource) => {
-    let objectName = resource.path.split("/")[3];
-    if (!resources[objectName]){
-      resources[objectName] = true;
-    }
-  });
-  return resources;
+  if (elementJSON.resources) {
+    elementJSON.resources.forEach((resource) => {
+      let objectName = resource.path.split("/")[3];
+      if (!resources[objectName]){
+        resources[objectName] = true;
+      }
+    });
+    return resources;
+  } else {
+    console.log('no resources found on this element');
+    console.log(Object.keys(elementJSON));
+  }
+
 }
 
 function getCRUDS (resourceName, elementJSON) {
