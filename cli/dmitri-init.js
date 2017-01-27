@@ -7,6 +7,8 @@ const chalk = require('chalk');
 
 let prefs = new Preferences('dmitri');
 
+//TODO add url value for development environment
+
 // function to get creds for given environemt
 let getCreds = function (environments, start, prefs) {
   let currEnv = start;
@@ -36,6 +38,7 @@ let getCreds = function (environments, start, prefs) {
       }
     }
   ];
+
   console.log(chalk.blue("Set up your " + environments[currEnv] + " environment"));
   inquirer.prompt(questions)
     .then((answers) => {
@@ -46,7 +49,10 @@ let getCreds = function (environments, start, prefs) {
         currEnv++;
         getCreds(environments, currEnv, prefs);
       } else {
-        console.log(prefs);
+        console.log();
+        console.log(chalk.green("Dmitri setup is complete"));
+        console.log(chalk.green("Start comparing elements or use 'dmitri --help' for more info"));
+        console.log();
       }
     });
 
