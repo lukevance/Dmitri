@@ -6,11 +6,7 @@ const combineResources = require('./compareElements').combine;
 const combineCRUDS = require('./compareElements').combineCRUDS;
 const render = require('./render');
 
-function compile (oldFilePath, newFilePath) {
-  // get path names for files from arguments
-  let oldJson = require(oldFilePath);
-  let newJson = require(newFilePath);
-
+function compile (oldJson, newJson) {
   // strip resources from element JSON
   let oldResources = getResources(oldJson);
   let newResources = getResources(newJson);
@@ -45,7 +41,12 @@ function dmCruds (oldFilePath, newFilePath) {
   render.compareGraph(results);
 }
 
+function requestStuff (stuff) {
+  console.log(stuff);
+}
+
 module.exports = {
   resources: dmResource,
-  cruds: dmCruds
+  cruds: dmCruds,
+  request: requestStuff
 };
