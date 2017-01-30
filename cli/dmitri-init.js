@@ -17,9 +17,7 @@ let defaults = {
   Development: {
     url: 'localhost:8080'
   }
-}
-
-//TODO add url value for development environment
+};
 
 // function to get creds for given environemt
 let getCreds = function (environments, start, prefs) {
@@ -65,11 +63,8 @@ let getCreds = function (environments, start, prefs) {
 
   console.log(chalk.blue("Set up your " + environments[currEnv] + " environment"));
   questions.forEach((q) => {
-    // console.log(q.name);
-    // console.log(defaults[environments[currEnv]][q.name]);
     if (defaults.hasOwnProperty(environments[currEnv]) && defaults[environments[currEnv]].hasOwnProperty(q.name)) {
       q.default = defaults[environments[currEnv]][q.name];
-      console.log(q.default);
     }
   });
   inquirer.prompt(questions)
