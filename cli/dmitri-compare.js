@@ -12,14 +12,12 @@ const compare = (elementkey, options) => {
     console.log(options.file);
     console.log(elementkey);
   } else {
-    // get prodElementKey
+    // by default compare prod and local elements via elementkey
     requester.getLocalElement(elementkey, (localElement) => {
       requester.getProdElement(elementkey, (prodElement) => {
-        cruds(localElement, prodElement);
+        cruds(prodElement, localElement, 'Prod', 'Local');
       });
     });
-    // get local element
-
   }
 };
 

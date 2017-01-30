@@ -6,7 +6,15 @@ const fg = require("./colors").fg;
 
 const checkCruds = require("./crudCheck");
 
-function compareGraph (resultsArray, next){
+function compareGraph (resultsArray, compareFromLabel, compareToLabel, next){
+  let compareFrom = 'Old';
+  let compareTo = 'New';
+
+  if (compareFromLabel !== null && compareToLabel !== null) {
+    compareFrom = compareFromLabel;
+    compareTo = compareToLabel;
+  }
+
   ctx.clear();
   // set up outlines
   // light box
@@ -21,8 +29,8 @@ function compareGraph (resultsArray, next){
   bg('lightest');
   fg('dark');
   ctx.text(3, 2, "Resource");
-  ctx.text(25, 2, "Old");
-  ctx.text(40, 2, "New");
+  ctx.text(25, 2, compareFrom);
+  ctx.text(40, 2, compareTo);
   ctx.text(50, 2, "Adds");
   ctx.text(60, 2, "Edits");
   ctx.text(70, 2, "Deletes");

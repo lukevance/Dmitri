@@ -36,28 +36,33 @@ function dmResource (resource, oldFilePath, newFilePath) {
 }
 
 // render general compare in console
-function dmCruds (oldFilePath, newFilePath) {
-  let results = compile(oldFilePath, newFilePath);
-  render.compareGraph(results);
+function dmCruds (firstElementJSON, secondElementJSON, compareFromLabel, compareToLabel) {
+  let results = compile(firstElementJSON, secondElementJSON);
+  render.compareGraph(results, compareFromLabel, compareToLabel);
 }
 
-function requestStuff (stuff) {
-  console.log(stuff);
-}
+// function requestStuff (stuff) {
+//   console.log(stuff);
+// }
 
-const requester = require('./apiHandler');
-
-function logstuff (content) {
-  console.log('name: ' + content.name);
-  console.log('description' + content.description);
-  console.log('key: ' + content.key);
-  console.log(content.resources.length);
-}
+// const requester = require('./apiHandler');
+//
+// function logstuff (content) {
+//   console.log('name: ' + content.name);
+//   console.log('description' + content.description);
+//   console.log('key: ' + content.key);
+//   console.log(content.resources.length);
+// }
 
 // requester.getProdElement('gooddata', logstuff);
 
+// let oldJSON = require(process.argv[2]);
+// let newJSON = require(process.argv[3]);
+//
+// dmCruds(oldJSON, newJSON);
+
 module.exports = {
   resources: dmResource,
-  cruds: dmCruds,
-  request: requestStuff
+  cruds: dmCruds
+  // request: requestStuff
 };
