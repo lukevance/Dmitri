@@ -5,7 +5,6 @@ const cruds = require('../index').cruds;
 const requester = require('../apiHandler');
 
 const compare = (elementkey, options) => {
-  console.log(options.resource);
   if (options.hub) {
     console.log('the hub option');
   } else if (options.file) {
@@ -13,7 +12,6 @@ const compare = (elementkey, options) => {
     console.log(options.file);
     console.log(elementkey);
   } else {
-    console.log('default');
     // get prodElementKey
     requester.getLocalElement(elementkey, (localElement) => {
       requester.getProdElement(elementkey, (prodElement) => {
