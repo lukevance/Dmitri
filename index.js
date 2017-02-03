@@ -2,6 +2,7 @@
 
 const getResources = require('./elementReader').getResources;
 const getCRUDS = require('./elementReader').getCRUDS;
+const getConfigs = require('./elementReader').configs;
 const combineResources = require('./compareElements').combine;
 const combineCRUDS = require('./compareElements').combineCRUDS;
 const render = require('./render');
@@ -30,7 +31,7 @@ function compile (oldJson, newJson) {
 
 
 // render resource changes
-function dmResource (resource, oldFilePath, newFilePath) {
+function dmResource (oldFilePath, newFilePath, resource) {
   let results = compile(oldFilePath, newFilePath);
   render.compareResource(0, results, resource);
 }
@@ -41,28 +42,15 @@ function dmCruds (firstElementJSON, secondElementJSON, compareFromLabel, compare
   render.compareGraph(results, compareFromLabel, compareToLabel);
 }
 
-// function requestStuff (stuff) {
-//   console.log(stuff);
-// }
+// render differences in configuration values for elements
+function configs (firstElementJSON, secondElementJSON, compareFromLabel, compareToLabel) {
+  console.log(getConfigs(firstElementJSON));
+  // console.log(getConfigs(secondElementJSON));
+}
 
-// const requester = require('./apiHandler');
-//
-// function logstuff (content) {
-//   console.log('name: ' + content.name);
-//   console.log('description' + content.description);
-//   console.log('key: ' + content.key);
-//   console.log(content.resources.length);
-// }
-
-// requester.getProdElement('gooddata', logstuff);
-
-// let oldJSON = require(process.argv[2]);
-// let newJSON = require(process.argv[3]);
-//
-// dmCruds(oldJSON, newJSON);
 
 module.exports = {
-  resources: dmResource,
+  configs: configs,
+  resource: dmResource,
   cruds: dmCruds
-  // request: requestStuff
 };

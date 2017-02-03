@@ -79,10 +79,6 @@ function changes (lineNum, resultsArray, resourceName){
       fg('lightest');
       ctx.text(2, currLine, resource.resource);
       currLine += 2;
-      // fg('light-blue');
-      // ctx.text(8, currLine, resource.method);
-      // fg('light-2');
-      // ctx.text(resource.method.length + 3, currLine, resource.path);
       fg('lightest');
       // currLine++;
       let currMethod;

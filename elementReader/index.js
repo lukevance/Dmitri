@@ -21,6 +21,14 @@ function getResources (elementJSON) {
 
 }
 
+function getConfigs (elementJSON) {
+  if (elementJSON.configuration && elementJSON.configuration.length > 0) {
+    return elementJSON.configuration.map(config => config.name);
+  } else {
+    console.log('no configuration values found on element JSON');
+  }
+}
+
 function getCRUDS (resourceName, elementJSON) {
   try {
     // TODO: add check for valid elementJSON
@@ -76,5 +84,6 @@ function getCRUDS (resourceName, elementJSON) {
 module.exports = {
   getResources: getResources,
   getHub: getHub,
-  getCRUDS: getCRUDS
+  getCRUDS: getCRUDS,
+  configs: getConfigs
 };

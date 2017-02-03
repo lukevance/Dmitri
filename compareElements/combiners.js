@@ -63,6 +63,10 @@ function combineCRUDS (oldCompiledCRUDS, newCompiledCRUDS){
   return results;
 }
 
+function combineConfigs (oldJson, newJson) {
+  console.log();
+}
+
 module.exports = {
   resourceNames: combineResources,
   cruds: combineCRUDS
