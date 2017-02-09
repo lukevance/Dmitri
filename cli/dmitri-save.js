@@ -15,7 +15,7 @@ function save (elementkey, options) {
   let path = '/Users/lukevance/Documents/scratch/';
   if (options.local) {
     requester.getLocalElement(elementkey, (elementJSON) => {
-      writeJSON(elementkey, elementJSON, path)
+      writeJSON(elementkey, JSON.stringify(elementJSON), path);
     });
   }
 }
