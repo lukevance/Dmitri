@@ -16,7 +16,7 @@ function getElementJson (url, auth, elementkey, next) {
 
   return rp(options)
     .then(r => next(r))
-    .catch((err) => httpErrors(err));
+    .catch((err) => httpErrors(err, elementkey));
 }
 
 function getProdElement (elementkey, next){
