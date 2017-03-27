@@ -67,7 +67,7 @@ function compareGraph (resultsArray, compareFromLabel, compareToLabel, next){
 
 }
 
-function changes (lineNum, resultsArray, resourceName){
+function changes (lineNum, resultsArray, resourceName) {
   let currResources = resultsArray;
   let currLine = lineNum;
   if (resourceName){
@@ -83,13 +83,13 @@ function changes (lineNum, resultsArray, resourceName){
       // currLine++;
       let currMethod;
       resource.changes.forEach((change) => {
-        if (currMethod !== change.path[0]){
+        if (currMethod !== change.path[0]) {
           currMethod = change.path[0];
           fg('light-blue');
           ctx.text(8, currLine, currMethod);
           currLine++;
         }
-        switch (change.kind){
+        switch (change.kind) {
           case 'N':
             fg('green');
             break;
@@ -103,8 +103,23 @@ function changes (lineNum, resultsArray, resourceName){
             fg('lightest');
         }
         ctx.text(10, currLine, change.path.slice(2).join('.'));
-        fg('lightest');
         currLine++;
+        // if (change.kind && change.kind === 'E') {
+        //   ctx.text(12, currLine, 'Prod: ');
+        //   ctx.text(17, currLine, change.lhs);
+        //   ctx.text(12, currLine, 'Local: ');
+        //   ctx.text(17, currLine, change.rhs);
+        //   currLine++;
+        // } else if (change.kind && change.kind === 'N') {
+        //   ctx.text(12, currLine, 'Prod: ');
+        //   ctx.text(17, currLine, change.lhs);
+        //   currLine++;
+        // } else if (change.kind && change.kind === 'D') {
+        //   ctx.text(12, currLine, 'Local: ');
+        //   ctx.text(17, currLine, change.rhs);
+        //   currLine++;
+        // }
+        fg('lightest');
       });
     }
   });

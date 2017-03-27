@@ -16,7 +16,7 @@ function getResources (elementJSON) {
     return resources;
   } else {
     console.log('no resources found on this element');
-    console.log(Object.keys(elementJSON));
+    // console.log(Object.keys(elementJSON));
   }
 
 }

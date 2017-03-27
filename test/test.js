@@ -4,6 +4,7 @@ const chai = require('chai');
 const expect = chai.expect;
 const elementReader = require('../elementReader');
 const element = require('./assets/element.json');
+const requester = require('../apiHandler');
 
 chai.should();
 
@@ -40,6 +41,18 @@ describe('Element Reader', () => {
       objectToTest.methods.should.have.property('UPDATE');
       objectToTest.methods.should.have.property('DESTROY');
       objectToTest.methods.should.have.property('SELECT');
+    });
+  });
+});
+
+describe('Requester', () => {
+  describe('getProdElement', () => {
+    it('should return Element JSON of the elementkey passed in', () => {
+      requester.getProdElement('gooddata', (r) => {
+        console.log(r);
+        return false;
+        // return r.should.have.property('blahhh');
+      });
     });
   });
 });

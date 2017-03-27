@@ -1,11 +1,11 @@
 "use strict";
 
-// const request = require('request');
 const rp = require('request-promise');
 const httpErrors = require('../errors').httpErrors;
+const getFile = require('./files');
 
 function getElementJson (url, auth, elementkey, next) {
-  var options = {
+  let options = {
       uri: url + '/elements/api-v2/elements/' + elementkey + '/export',
       headers: {
           'Content-Type': 'application/json',
@@ -24,7 +24,7 @@ function getProdElement (elementkey, next){
   getElementJson('https://console.cloud-elements.com', prodAuth, elementkey, next);
 }
 
-function getLocalElement (elementkey, next){
+function getLocalElement (elementkey, next) {
   let localAuth = 'User FB3HWnO27jUB8pOuWqpioc4kquY4NYphQ4EemSKfw2U=, Organization 672aa88bb4e3235091de77900e3e299b';
   getElementJson('http://localhost:8080', localAuth, elementkey, next);
 }
@@ -32,6 +32,7 @@ function getLocalElement (elementkey, next){
 
 module.exports = {
   // getHubDocs: getHubDocs,
+  getFile: getFile,
   getProdElement: getProdElement,
   getLocalElement: getLocalElement,
   authenticate: require('./auth').authenticate

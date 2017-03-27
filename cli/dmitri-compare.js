@@ -51,29 +51,27 @@ const prodLocal = (options) => {
   console.log(options);
 };
 
-const compare = (compareStage, options) => {
-  console.log("options");
-  if (compareStage) {
-    // console.log(Object.keys(options));
-    // console.log(options.resource);
-    // if (options.configs) {
-    //   configuration(elementkey);
-    // } else if (options.file) {
-    //   console.log('the file options');
-    //   fileToProd(elementkey, options.file);
-    //
-    // } else if (options.resource){
-    //   console.log(options.resource);
-    //   localToProd(elementkey, dmitri.resource, {resource: options.resource});
-    //   // show
-    // } else if (elementkey && !options.resource && !options.file && !options.labels){
-    //   // by default compare prod and local elements via elementkey
-    //   localToProd(elementkey, dmitri.cruds, {labels: ['Prod', 'Local']});
-    // } else {
-    //   console.log('you messed up the command');
-    // }
-    console.log(compareStage);
-    switch (compareStage) {
+const setStage = (options) => {
+  console.log(options);
+  switch (options.env) {
+    case "staging":
+
+
+      break;
+    default:
+
+  }
+  // return promise to resolve with element.json
+};
+
+const compare = (property, options) => {
+  setStage(options)
+  .then((element) => {
+
+  });
+  if (property) {
+    console.log(property);
+    switch (property) {
       case "local":
         console.log('here');
         prodLocal(options);
@@ -92,8 +90,8 @@ const compare = (compareStage, options) => {
         break;
     }
   } else {
-    if (!compareStage) {
-        terminate('No enviroment provided');
+    if (!property) {
+        terminate('No property provided');
     } else if (!options) {
         terminate('No options provided');
     }
@@ -101,16 +99,17 @@ const compare = (compareStage, options) => {
 };
 
 program
-  .command('env', '[local || staging || prod || file]')
-  .action((compareStage, options) => compare(compareStage, options))
-  .option('-k, --elementkey', 'overrides the elementkey of the currently checked out element')
-  .option('-c, --configs', 'compares config values')
-  .option('-r, --resource <resourceName', 'shows change details for specific resource')
+  .command('property', '[configs || resources || path.to.property]')
+  .action((property, options) => compare(property, options))
+  .option('-e, --env <environment>', 'overrides the default environment for comparison to other env')
+  .option('-k, --key <elementkey>', 'overrides the elementkey with a specific other element')
+  .option('-f, --file <filePath>', 'compares to specific element.json file')
   .on('--help', () => {
     console.log('  Examples:');
     console.log('');
-    console.log('    $ dmitri compare local {elementKey}');
-    console.log('    $ dmitri compare file /path/to/file/element.json');
+    console.log('    $ dmitri compare configs');
+    console.log('    $ dmitri compare resources /path/to/file/element.json');
+    console.log('    $ dmitri compare resources.users.create.body --env staging --key shopify');
     console.log('');
   })
   .parse(process.argv);
