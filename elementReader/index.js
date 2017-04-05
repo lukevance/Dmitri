@@ -1,5 +1,7 @@
 "use strict";
 
+const params = require('./params');
+
 function getHub (elementJSON) {
   return elementJSON.hub;
 }
@@ -84,6 +86,7 @@ function getCRUDS (resourceName, elementJSON) {
 module.exports = {
   getResources: getResources,
   getHub: getHub,
+  getParamNames: params.getNames,
   getCRUDS: getCRUDS,
   configs: getConfigs
 };

@@ -26,6 +26,12 @@ describe('Element Reader', () => {
       Object.keys(elementReader.getResources(element)).should.have.lengthOf(4);
     });
   });
+  describe('#getParamNames', () => {
+    it('should return an array of resource parameter names', () => {
+      let resource = element.resources[0];
+      elementReader.getParamNames(resource).should.have.lengthOf(3);
+    });
+  });
   describe('#getCRUDS', () => {
     it('should return an object with two top level keys: {name: "string", methods: object}', () => {
       Object.keys(elementReader.getCRUDS('activities', element)).should.have.lengthOf(2);
