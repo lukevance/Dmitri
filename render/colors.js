@@ -2,7 +2,7 @@
 
 const ctx = require('axel');
 
-function bg (color) {
+const bg = (color) => {
   switch (color) {
     case 'dark':
       ctx.bg(15, 15, 15, 0.5);
@@ -13,9 +13,9 @@ function bg (color) {
     case 'light-2':
       ctx.bg(105, 105, 105, 0.5);
   }
-}
+};
 
-function fg (color) {
+const fg = (color) => {
   switch (color) {
     case 'dark':
       ctx.fg(15, 15, 15, 0.5);
@@ -39,7 +39,7 @@ function fg (color) {
       ctx.fg(213, 79, 35);
       break;
   }
-}
+};
 
 module.exports = {
   bg: bg,
