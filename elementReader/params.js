@@ -1,4 +1,5 @@
 "use strict";
+const chalk = require('chalk');
 
 const getNames = (resource) => {
   try {
@@ -16,6 +17,23 @@ const getNames = (resource) => {
   }
 };
 
+const getSimple = (resource) => {
+  if (resource.parameters && resource.parameters.length > 0) {
+    let name = chalk.dim('____') + 'name';
+    let params = resource.parameters.map((param) => {
+      return {
+        name: chalk.magenta(param.name),
+        type: param.type,
+        datatype: param.dataType,
+        vendorName: param.vendorName,
+        required: param.required
+      };
+    });
+    return params;
+  }
+};
+
 module.exports = {
-  getNames: getNames
+  getNames: getNames,
+  getSimple: getSimple
 };

@@ -50,10 +50,31 @@ const subResources = (element, subPath) => {
 };
 
 const resourcesOverview = (element) => {
-  element.resources.forEach((resource) => {
-    // filter resources 
-    console.log(chalk.magenta(resource.method) + ': ' + resource.path);
+  // get base resource names
+  let baseResourceNames = elementReader.resources.getBaseNames(element);
+  baseResourceNames.forEach((objectName) => {
+    console.log(chalk.magento(objectName));
+    let objectResources = element.resources.filter(resource => {
+      // getPa
+      if (objectName === elementReader.resource.getPathsNoHubs(resource))  {
+
+      }
+    })
+    .forEach((resource) => {
+      console.log("    " + resource.method + ": " + resource.path);
+    });
   });
+
+  // loop over resource names, reduce element Resources
+  // element.resources.forEach((resource) => {
+  //   // filter resources
+  //   console.log(chalk.magenta(resource.method) + ': ' + resource.path);
+  // });
+  // result:
+  //    contacts       GET POST
+  //    contacts/{id}
+  //    tasks     GET
+  //
 };
 
 const allConfigs = (element) => {

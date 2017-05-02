@@ -1,26 +1,10 @@
 "use strict";
 
 const params = require('./params');
+const resources = require('./resources');
 
 function getHub (elementJSON) {
   return elementJSON.hub;
-}
-
-function getResources (elementJSON) {
-  let resources = {};
-  if (elementJSON.resources) {
-    elementJSON.resources.forEach((resource) => {
-      let objectName = resource.path.split("/")[3];
-      if (!resources[objectName]){
-        resources[objectName] = true;
-      }
-    });
-    return resources;
-  } else {
-    console.log('no resources found on this element');
-    // console.log(Object.keys(elementJSON));
-  }
-
 }
 
 function getConfigs (elementJSON) {
@@ -55,9 +39,9 @@ function getCRUDS (resourceName, elementJSON) {
             case 'GET':
               // check if RETRIEVE or SELECT
               if (resourceProperties.path.indexOf('{') > 0){
-                resourceCRUDS.methods.SELECT = resourceProperties;
-              } else {
                 resourceCRUDS.methods.RETRIEVE = resourceProperties;
+              } else {
+                resourceCRUDS.methods.SEARCH = resourceProperties;
               }
               break;
             case 'POST':
@@ -84,9 +68,11 @@ function getCRUDS (resourceName, elementJSON) {
 }
 
 module.exports = {
-  getResources: getResources,
+  getResources: resources.getNames,
+  resources: resources,
   getHub: getHub,
   getParamNames: params.getNames,
+  getSimpleParams: params.getSimple,
   getCRUDS: getCRUDS,
   configs: getConfigs
 };
