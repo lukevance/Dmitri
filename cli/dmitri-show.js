@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 const program = require('commander');
 const render = require('../render');
@@ -7,10 +7,10 @@ const render = require('../render');
 const getFile = (filePath) => {
   return new Promise((resolve, reject) => {
     let element = require(filePath);
-    if (element.hasOwnProperty("resources") && element.hasOwnProperty("configuration")) {
+    if (element.hasOwnProperty('resources') && element.hasOwnProperty('configuration')) {
       resolve(element);
     } else {
-      reject("Provided JSON file was not a valid element.json file.");
+      reject('Provided JSON file was not a valid element.json file.');
     }
   });
 };
@@ -28,7 +28,7 @@ const show = function (propertiesPath, options) {
           .then(element => render.show(element, propertiesPath))
           .catch(e => console.log(e));
       } else {
-        throw "Please provide valid file path";
+        throw 'Please provide valid file path';
       }
     // check for env option to pull element from
     } else if (options.environment && propertiesPath) {

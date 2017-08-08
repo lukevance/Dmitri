@@ -15,7 +15,7 @@ describe('Element Reader', () => {
     });
   });
   describe('#getResources', () => {
-    it('should return an object containing keys of all resources', () => {
+    it('should return an array containing keys of all resources', () => {
       let resources = ['activities', 'campaigns', 'contacts'];
       resources.forEach((resource) => {
         elementReader.getResources(element).should.have.property(resource);
