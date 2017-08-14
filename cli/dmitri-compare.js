@@ -33,7 +33,7 @@ const fileToProd = (elementkey, pathToFile) => {
   }
 };
 
-const configuration = function (elementkey){
+const configuration = (elementkey) => {
   console.log(elementkey);
   requester.getLocalElement(elementkey, (localElement) => {
     // console.log(Object.keys(localElement));

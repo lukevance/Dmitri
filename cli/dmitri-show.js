@@ -19,7 +19,7 @@ const loadedElement = () => {
   return false;
 };
 
-const show = function (propertiesPath, options) {
+const show = (propertiesPath, options) => {
   try {
     // check for file option to load element
     if (options.file && propertiesPath) {
