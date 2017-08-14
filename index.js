@@ -7,7 +7,7 @@ const combineResources = require('./compareElements').combine;
 const combineCRUDS = require('./compareElements').combineCRUDS;
 const render = require('./render');
 
-function compile (oldJson, newJson) {
+const compile = (oldJson, newJson) => {
   // strip resources from element JSON
   let oldResources = getResources(oldJson);
   let newResources = getResources(newJson);
@@ -31,19 +31,19 @@ function compile (oldJson, newJson) {
 
 
 // render resource changes
-function dmResource (oldFilePath, newFilePath, resource) {
+const dmResource = (oldFilePath, newFilePath, resource) => {
   let results = compile(oldFilePath, newFilePath);
   render.compareResource(0, results, resource);
 }
 
 // render general compare in console
-function dmCruds (firstElementJSON, secondElementJSON, compareFromLabel, compareToLabel) {
+const dmCruds = (firstElementJSON, secondElementJSON, compareFromLabel, compareToLabel) => {
   let results = compile(firstElementJSON, secondElementJSON);
   render.compareGraph(results, compareFromLabel, compareToLabel);
 }
 
 // render differences in configuration values for elements
-function configs (firstElementJSON, secondElementJSON, compareFromLabel, compareToLabel) {
+const configs = (firstElementJSON, secondElementJSON, compareFromLabel, compareToLabel) = {
   console.log(getConfigs(firstElementJSON));
   // console.log(getConfigs(secondElementJSON));
 }
