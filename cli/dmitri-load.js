@@ -7,7 +7,7 @@ const chalk = require('chalk');
 
 const prefs = new Preferences('dmitri');
 
-const load = function (elementkey, options) {
+const load = (elementkey, options) => {
   // get element from desired location
 }
 

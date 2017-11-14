@@ -19,8 +19,8 @@ let defaults = {
   }
 };
 
-// function to get creds for given environemt
-let getCreds = function (environments, start, prefs) {
+// get creds for given environemt
+let getCreds = (environments, start, prefs) => {
   let currEnv = start;
   let questions = [
     {
